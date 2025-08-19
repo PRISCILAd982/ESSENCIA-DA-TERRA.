@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///C:/Users/Leila%20Gomes/Desktop/PROJETO/ESSENCIA%202/INDEX.HTML/INDEX.HTML -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essência da Terra - Laticínios</title>
+
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #6a994e;
+      color: white;
+      padding: 20px;
+
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .produto {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      background: white;
+      text-align: center;
+    }
+    .produto img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #6a994e;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #386641;
+    }
+    footer {
+      background: #386641;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .avaliacao input {
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Essência da Terra</h1>
+    <p>Fundadores: Breno Porto &amp; Marcelly Alves</p>
+    <p>Uma microempresa cristã levando o melhor para você ✝️</p>
+    <img src="./Essência da Terra - Laticínios_files/ES.jpeg" p="">
+  </header>
+
+  <div class="container">
+    <h2>Iogurtes Naturais - R$10,00</h2>
+    <div class="produtos">
+      <div class="produto">
+        <img src="./Essência da Terra - Laticínios_files/ES1.jpeg" iogurte="" maracujá"="">
+        <h3>Maracujá</h3>
+      </div>
+      <div class="produto">
+        <img src="./Essência da Terra - Laticínios_files/ES2.jpeg" <h3="">Ameixa
+      </div>
+      <div class="produto">
+        <img src="./Essência da Terra - Laticínios_files/ES3.jpeg" alt="Iogurte Limão">
+        <h3>Limão</h3>
+      </div>
+      <div class="produto">
+        <img src="./Essência da Terra - Laticínios_files/ES4.jpeg" alt="Iogurte Morango">
+        <h3>Morango</h3>
+      </div>
+      <div class="produto">
+        <img src="./Essência da Terra - Laticínios_files/ES4.jpeg" alt="Iogurte Coco">
+        <h3>Coco</h3>
+      </div>
+    </div>
+
+    <h2>Faça seu pedido</h2>
+    <form id="pedidoForm">
+      <label>Nome Completo:</label>
+      <input type="text" name="nome" required="">
+
+      <label>Telefone:</label>
+      <input type="text" name="telefone" required="">
+
+      <label>Endereço:</label>
+      <textarea name="endereco" required=""></textarea>
+
+      <label>Sabor do Iogurte:</label>
+      <select name="sabor">
+        <option>Maracujá</option>
+        <option>Ameixa</option>
+        <option>Limão</option>
+        <option>Morango</option>
+        <option>Coco</option>
+        <option>Outro (especifique)</option>
+      </select>
+
+      <label>Outro sabor (se desejar):</label>
+      <input type="text" name="outro">
+
+      <label>Forma de Pagamento:</label>
+      <select name="pagamento">
+        <option>Pix</option>
+        <option>Dinheiro</option>
+        <option>Cartão</option>
+      </select>
+
+      <div class="avaliacao">
+        <p>Como você avalia nossos produtos?</p>
+        <label><input type="radio" name="avaliacao" value="Gostei"> Gostei</label>
+        <label><input type="radio" name="avaliacao" value="Não gostei"> Não gostei</label>
+      </div>
+
+      <button type="submit">Enviar Pedido</button>
+    </form>
+
+    <h2>Vídeos e Fotos</h2>
+    <p>Confira nossos produtos também no Instagram:</p>
+    <a href="https://www.instagram.com/essenciadaterrabm" target="_blank">
+      <img src="./Essência da Terra - Laticínios_files/ES.jpeg" alt="Instagram" width="50">
+    </a>
+      
+      </div>
+    
+  
+
+  <footer>
+    <p>📞 WhatsApp: (33) 8426-9064 | 📧 Email: contatomarcellyalves@gmail.com</p>
+    <p>© 2025 Essência da Terra - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    document.getElementById("pedidoForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const nome = this.nome.value;
+      const telefone = this.telefone.value;
+      const endereco = this.endereco.value;
+      const sabor = this.sabor.value === "Outro (especifique)" ? this.outro.value : this.sabor.value;
+      const pagamento = this.pagamento.value;
+      const avaliacao = this.avaliacao.value || "";
+
+      const mensagem = `Olá, meu nome é ${nome}%0ATelefone: ${telefone}%0AEndereço: ${endereco}%0AIogurte: ${sabor}%0AForma de Pagamento: ${pagamento}%0AAvaliação: ${avaliacao}`;
+      const whatsappURL = `https://wa.me/553384269064?text=${mensagem}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+
+
+</body></html>
